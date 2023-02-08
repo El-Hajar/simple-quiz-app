@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="normalize.css" /> -->
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="start start-btn">Start Quiz</button>
+    <article class="start info-wrapper">
+      <h3 class="info-title">Rules of the quiz.</h3>
+      <ol class="info-list">
+        <li>
+          You will have only
+          <span>15 seconds</span>
+          per each question
+        </li>
+        <li>Once you select your answer, it can't be undone</li>
+        <li>You can't select any option once time goes out</li>
+        <li>You can't exit from the Quiz while you're playing</li>
+        <li>You'll get points on the basis of your correct answers</li>
+      </ol>
+      <div class="info-btns">
+        <button class="btn exit-btn">Exit Quiz</button>
+        <button class="btn continue-btn">Continue</button>
+      </div>
+    </article>
+    <article class="start quiz-wrapper">
+      <header>
+        <div class="quiz-title">
+          <h1>Quiz Html</h1>
+          <div class="quiz-timer">
+            <p>Time Left</p>
+            <span></span>
+          </div>
+        </div>
+        <div class="time-line"></div>
+      </header>
+      <div class="quiz-content">
+        <h3 class="quiz-queston"></h3>
+        <div class="quiz-options"></div>
+      </div>
+      <footer>
+        <p class="questions-counter"></p>
+        <button class="btn next-btn">Next</button>
+      </footer>
+    </article>
+    <article class="start results-wrapper">
+      <div class="cron-icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div>
+        <p>you've completed the quiz!</p>
+        <p class="eval"></p>
+
+        <div class="resutls-btns">
+          <button class="btn continue-btn">Replay Quiz</button>
+          <button class="btn exit-btn" style="margin-right: 0;" ; }>
+            Exit Quiz
+          </button>
+        </div>
+      </div>
+    </article>
+    <script src="script.js"></script>
+  </body>
+</html>

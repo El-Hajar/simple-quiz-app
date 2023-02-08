@@ -1,0 +1,256 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300;1,400&display=swap');
+
+:root {
+    --main-blue:#007bff;
+    --main-grey:rgba(0, 0, 0, 0.19);
+    --main-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                  0 6px 20px 0 var(--main-grey);
+}
+
+body {
+    background-color: var(--main-blue);
+    font-family:'Itim', cursive;
+}
+
+h1 {
+    font-size: 1rem;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    box-shadow:var(--main-shadow);
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+}
+
+.btn{
+    color: #fff;
+    border: solid 1px var(--main-blue);
+    border-radius: 5px;
+    background-color: var(--main-blue);
+    cursor: pointer;
+}
+
+.show-box {
+    display: block;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.start-btn {
+    padding: 15px 25px;
+    color: var(--main-blue);
+    cursor: pointer;
+}
+
+/* quiz rules */
+
+article {
+    width: 500px;
+    display: none;
+}
+
+.info-wrapper .info-title {
+    color: rgba(0, 0, 0, 0.80);
+    padding: 10px 20px;
+    border-bottom: solid 1px var(--main-grey);
+}
+
+.info-wrapper .info-list {
+    margin-right: 10px;
+}
+
+.info-wrapper .info-list li {
+    color: rgba(0, 0, 0, 0.70);
+}
+.info-wrapper span {
+    color: var(--main-blue);
+    font-weight: 600;
+}
+
+.info-wrapper .info-btns {
+    padding: 10px 20px;
+    border-top: solid 1px var(--main-grey);
+    display: flex;
+    justify-content: end;
+}
+
+.continue-btn {
+    padding: 7px 10px;
+    border: solid 1px var(--main-blue);
+}
+
+.exit-btn {
+    background-color: #fff;
+    color: var(--main-blue);
+    margin-right: 10px;
+    padding: 7px 10px;
+}
+
+.exit-btn:hover {
+    color: #fff;
+    background-color: var(--main-blue);
+}
+
+/*quiz box*/
+
+.quiz-wrapper .quiz-title {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--main-grey);
+    box-shadow: var(--main-shadow);
+}
+
+.quiz-wrapper .quiz-title .quiz-timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 255,0.1);
+    color: var(--main-blue);
+}
+
+.quiz-wrapper .quiz-timer p{
+    margin: 0;
+}
+
+.quiz-wrapper .quiz-timer span {
+    padding: 0 8px;
+    margin-left: 8px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.time-line {
+    height: 3px;
+    background-color: var(--main-blue);
+}
+
+.quiz-content {
+   padding: 10px;
+}
+
+.quiz-options .option {
+    background-color:aliceblue;
+    padding: 5px 8px;
+    border: 1px solid var(--main-blue) ;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.quiz-options .option:hover {
+    background-color:rgba(0, 0, 255,0.15);
+}
+
+/*icons tick + cross*/
+
+.icon {
+    float: right;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.tick {
+    border: 2px solid green;
+    color: green;
+}
+
+.cross {
+    border: 2px solid red;
+    color: red;
+}
+
+.quiz-options .disabled {
+    pointer-events: none;
+}
+
+.quiz-options .correct {
+    border-color: green;
+    background-color:rgba(0, 255, 0,0.15) ;
+}
+
+.quiz-options .wrong {
+    border-color: red;
+    background-color:rgba(255, 0, 0,0.15) ;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    border-top:solid 1px var(--main-grey);
+}
+
+footer .questions-counter {
+    padding: 0 10px;
+}
+
+footer .next-btn {
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 10px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+footer .enable-next-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.display-results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.cron-icon {
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    color: var(--main-blue);
+    padding: 13px 0;
+}
+
+.perfect {
+    color: var(--main-blue);
+}
+
+.good {
+    color: green;
+}
+
+.bad {
+    color: red;
+}
+
+.resutls-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+
